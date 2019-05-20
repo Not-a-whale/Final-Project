@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Lato Bold';
+  src: url("../../font/Lato-Regular.ttf") format("truetype-variations");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'PlayfairDisplay-Italic';
+  src: url("../../font/PlayfairDisplay-Italic.otf") format("truetype-variations");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'KrinkesDecorPERSONAL';
+  src: url("../font/KrinkesDecorPERSONAL.ttf") format("truetype-variations");
+  font-weight: 700; }
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato Bold";
+  color: #000000;
+  font-weight: 300; }
+
+.container {
+  max-width: 114rem;
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 32.25rem) 1fr;
+  grid-template-rows: 3.8rem minmax(12.8rem, 1fr) 30vh repeat(2, minmax(13.1rem, 1fr)) 30vh minmax(min-content, 70rem); }
+
+.header {
+  grid-template-columns: 1 / 6; }
+  .header__top {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(43rem, 1fr));
+    padding: 1.3rem 0;
+    background-color: #f2f2f2; }
+    .header__top--phone {
+      display: flex;
+      flex-direction: row;
+      padding-left: 9rem; }
+      .header__top--phone img {
+        height: 1rem;
+        width: 1.2rem; }
+      .header__top--phone p {
+        padding-left: .5rem; }
+    .header__top--menu {
+      display: flex;
+      flex-direction: row;
+      justify-self: end;
+      margin-right: 7.2rem; }
+      .header__top--menu-item {
+        font-size: 1.1rem;
+        width: 10.8rem;
+        padding-right: .7rem;
+        text-align: right; }
+        .header__top--menu-item:not(:last-child) {
+          border-right: 1px solid black; }
+        .header__top--menu-item:first-child {
+          text-align: center;
+          padding-right: 0; }
+        .header__top--menu-item:last-child {
+          text-align: center;
+          padding-right: 0; }
+        .header__top--menu-item a {
+          text-transform: uppercase;
+          cursor: pointer;
+          text-decoration: none;
+          color: #000000; }
+  .header__bottom {
+    display: grid;
+    grid-template-columns: repeat(4 auto-fit, minmax(25rem, 1fr));
+    align-content: center; }
+    .header__bottom--menu {
+      margin-left: 7.5rem;
+      display: flex;
+      flex-direction: row;
+      align-self: center; }
