@@ -606,7 +606,11 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
   grid-gap: 2rem;
-  border: 1px solid #f2f2f2; }
+  border: 1px solid #f2f2f2;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center; }
   .items__element {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -628,15 +632,16 @@ body {
       grid-row: 1 / 3;
       justify-self: center;
       align-self: center;
-      width: 6.2rem;
-      height: 5.2rem;
+      width: 0;
+      height: 0;
       border: none;
       background: none;
       cursor: pointer;
-      z-index: 99999; }
+      z-index: 99999;
+      transition: all .8s ease; }
       .items__element--button svg {
-        width: 6rem;
-        height: 5rem; }
+        width: 100%;
+        height: 100%; }
     .items__element--add {
       grid-column: 1 / 3;
       grid-row: 2 / 3;
@@ -677,6 +682,9 @@ body {
     .items__element:hover img {
       cursor: pointer;
       filter: grayscale(75%) opacity(1) brightness(44%); }
+    .items__element:hover button {
+      width: 5.6rem;
+      height: 5rem; }
     .items__element--discount {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
