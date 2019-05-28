@@ -605,7 +605,8 @@ body {
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-  grid-gap: 2rem; }
+  grid-gap: 2rem;
+  border: 1px solid #f2f2f2; }
   .items__element {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
