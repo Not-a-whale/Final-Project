@@ -103,7 +103,7 @@
         justify-content: space-between;
         position: fixed;
         width: 100%;
-        z-index: 999999;
+        z-index: 1;
 
         @media screen and (min-width: 860px) {
             grid-template-columns: 1fr max-content minmax(min-content, 50vw) max-content 1fr min-content 7.5rem;
