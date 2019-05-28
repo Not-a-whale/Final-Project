@@ -640,7 +640,7 @@ body {
       cursor: pointer;
       outline: none;
       z-index: 99999;
-      transition: all .8s ease; }
+      transition: all .7s ease; }
       .items__element--button:focus svg {
         stroke: transparent;
         fill: maroon; }
