@@ -101,9 +101,13 @@
         grid-template-rows: repeat(4, max-content);
         align-content: center;
         justify-content: space-between;
-        position: fixed;
+        position: sticky;
         width: 100%;
         z-index: 1;
+
+        @media screen and (min-width: 860px) {
+            position: sticky;
+        }
 
         @media screen and (min-width: 860px) {
             grid-template-columns: 1fr max-content minmax(min-content, 50vw) max-content 1fr min-content 7.5rem;
@@ -115,7 +119,9 @@
             &:checked ~ nav,
             &:checked ~ div > ul,
             &:checked ~ div {
+                
                 transform: scale(1,1);
+
             }
 
             &:checked ~ .header__bottom--SM-buttons {
@@ -187,14 +193,16 @@
             align-items: center;
             transform: scale(1, 0);
             transition: all 0.4s ease-in-out;
-            margin-left: 5rem;
-            margin-top: 2rem;
-            color: $color-primary-2;
+            padding-left: 5rem;
+            margin-top: 6rem;
+            padding-bottom: 4rem;
+            background-color: $color-primary-1;
 
             @media screen and (min-width: 860px) {
                 grid-column: 2 / 3;
                 transform: scale(1, 1);
                 color: $color-primary-1;
+                background-color: transparent;
             }
         }
 
