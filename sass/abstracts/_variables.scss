@@ -1,33 +1,12 @@
 //Color variables 
 
-
 $color-primary-1: #000000;
 $color-primary-2: #ffffff;
 
 $color-secondary-1: #d9bf8f;
 $color-secondary-2: #f0975c;
 
-
-//fonts 
-
-@font-face {
-    font-family: 'Lato Bold';
-    src: url('../../font/Lato-Regular.ttf') format("truetype-variations");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'PlayfairDisplay-Italic';
-    src: url('../../font/PlayfairDisplay-Italic.otf') format("truetype-variations");
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: 'KrinkesDecorPERSONAL';
-    src: url('../font/KrinkesDecorPERSONAL.ttf')  format("truetype-variations");
-    font-weight: 700;
-}
-
-$display-font: 'Lato Bold';
+// font variables
+$display-font: 'Lato Regular';
 $header-font: 'PlayfairDisplay-Italic';
 $logo-font: 'KrinkesDecorPERSONAL';

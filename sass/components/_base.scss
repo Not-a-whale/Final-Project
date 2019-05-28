@@ -19,8 +19,4 @@ body {
 
 
 .container {
-    max-width: 114rem;
-    display: grid;
-    grid-template-columns: 1fr repeat(4, 32.25rem) 1fr;
-    grid-template-rows: 3.8rem minmax(12.8rem, 1fr) 30vh repeat(2, minmax(13.1rem, 1fr)) 30vh minmax(min-content, 70rem);
 }

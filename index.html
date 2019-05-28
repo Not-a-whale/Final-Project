@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Shopia</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Shophia</title>
 </head>
 <body>
     <div class="container">
@@ -22,43 +23,238 @@
                 </div>
             </div>
             <div class="header__bottom">
-                <div class="header__bottom--menu">
-                    <div class="header__bottom--menu-item">Home</div>
-                    <div class="header__bottom--menu-item">Gallery</div>
-                    <div class="header__bottom--menu-item">Categories</div>
-                    <div class="header__bottom--menu-item">Pages</div>
-                </div>
-                <div class="header__bottom--logo">
-                    <p>
-                        Shophia
-                    </p>
-                </div>
+                <input type="checkbox" name="bottom_menu" id="header__bottom--input">
+                <label for="header__bottom--input"><span><a href="#"></a></span></label>
+                <nav class="header__bottom--nav">
+                    <ul class="header__bottom--menu">
+                        <li class="header__bottom--menu-item">
+                            <a href="#" class="header__bottom--menu-link">Home</a>
+                        </li>
+                        <li class="header__bottom--menu-item">
+                            <a href="#" class="header__bottom--menu-link">Gallery</a>
+                        </li>
+                        <li class="header__bottom--menu-item">
+                            <a href="#" class="header__bottom--menu-link">Categories</a>
+                        </li>
+                        <li class="header__bottom--menu-item">
+                            <a href="#" class="header__bottom--menu-link">Pages</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1 class="header__bottom--logo">
+                    <a href="#">Shophia</a>
+                </h1>
                 <div class="header__bottom--SM-buttons">
-                    <div class="header__bottom--SM-button"></div>
-                    <div class="header__bottom--SM-button"></div>
-                    <div class="header__bottom--SM-button"></div>
-                    <div class="header__bottom--SM-button"></div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-pinterest" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="header__bottom--languages">
+                    <input type="checkbox" name="languages" id="languages">
+                    <label for="languages">English<span></span></label>
                     <ul class="header__bottom--languages-list">
-                        <li>English</li>
-                        <li>Spanish</li>
-                        <li>French</li>
-                        <li>Italian</li>
+                        <li><a href="#"></a> Spanish</li>
+                        <li><a href="#"></a> French</li>
+                        <li><a href="#"></a> Italian</li>
                     </ul>
                 </div>
             </div>
         <div class="banner">
-            banner
+            <div class="banner__column--left">
+                <div class="banner__column--left--arrow"></div>
+            </div>
+            <div class="banner__main">
+                <div class="banner__main--border-box-1">
+                    <div class="banner__main--border-box-2">
+                        <h4>Mid-season</h4>
+                        <h2>Sale</h2>
+                        <div>
+                            <div class="lines--right"></div>
+                            <div class="lines--left"></div>
+                            <p>Up to</p>
+                        </div>
+                        <h3>50 <span class="percent">%</span><span class="discount"> off</span></h3>
+                    </div>
+                </div>
+                <button class="btn banner__main--btn">Shop now</button>
+                <div class="banner__main--slider">
+                    <div class="banner__main--slider--gem"></div>
+                    <div class="banner__main--slider--gem"></div>
+                    <div class="banner__main--slider--gem"></div>
+                </div>
+            </div>
+            <div class="banner__column--right">
+                <div class="banner__column--right--arrow"></div>
+            </div>
         </div>
         <div class="offer">
-            offer
+            <div class="offer__container">
+                <div class="offer__container--item offer__container--item-left">
+                    <div class="offer__container--item-group">
+                        <img src="./img/plane.png" alt="plane">
+                        <div>
+                            <h2>Free Shipping</h2>
+                            <p>In Order Min $200</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer__container--item offer__container--item-center">
+                    <div class="offer__container--item-group">
+                        <img src="./img/clock.png" alt="clock">
+                        <div>
+                            <h2>30-days returns</h2>
+                            <p>Money Back Guarantee</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer__container--item offer__container--item-right">
+                    <div class="offer__container--item-group">
+                        <img src="./img/support.png" alt="support">
+                        <div>
+                            <h2>24/7 support</h2>
+                            <p>Lifetime Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="collection">
-            collection
+            <div class="collection__line collection__line--left"></div>
+            <div class="collection__content">
+                <div class="collection__square collection__square--left"></div>
+                <h3 class="collection__text">Summer Collection</h3>
+                <div class="collection__square collection__square--right"></div>  
+            </div> 
+            <div class="collection__line collection__line--right"></div>
         </div>
         <div class="items">
-            all the images
+            <div class="items__element items__element-1">
+                <img src="./img/photo1.png" alt="photo 1">
+                <div class="items__element--discount"><p>20%</p></div>
+                <button class="items__element--button">                
+                    <svg class="items__element--like">
+                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                    </svg>
+                </button>
+                <div class="items__element--add">
+                    <p>
+                        + Add to cart
+                    </p>
+                </div>
+            </div>
+            <div class="items__element items__element-2">
+                <img src="./img/photo2.png" alt="photo-2">
+                <button class="items__element--button">                
+                    <svg class="items__element--like">
+                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                    </svg>
+                </button>
+                <div class="items__element--add">
+                    <p>
+                        + Add to cart
+                    </p>
+                </div>
+            </div>
+            <div class="items__element items__element-3">
+                <img src="./img/photo3.png" alt="photo 3">
+                <button class="items__element--button">                
+                    <svg class="items__element--like">
+                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                    </svg>
+                </button>
+                <div class="items__element--add">
+                    <p>
+                        + Add to cart
+                    </p>
+                </div>
+            </div>
+            <div class="items__element items__element-4">
+                <img src="./img/photo4.png" alt="photo 4">
+                <div class="items__element--discount"><p>40%</p></div>
+                <button class="items__element--button">                
+                    <svg class="items__element--like">
+                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                    </svg>
+                </button>
+                <div class="items__element--add">
+                    <p>
+                        + Add to cart
+                    </p>
+                </div>
+            </div>
+            <div class="items__element items__element-5">
+                <img src="./img/photo5.png" alt="photo 5">
+                <div class="items__element--discount"><p>20%</p></div>
+                <button class="items__element--button">                
+                    <svg class="items__element--like">
+                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                    </svg>
+                </button>
+                <div class="items__element--add">
+                    <p>
+                        + Add to cart
+                    </p>
+                </div>
+            </div>
+            <div class="items__element items__element-6">
+                <img src="./img/photo6.png" alt="photo 6">
+                <button class="items__element--button">                
+                    <svg class="items__element--like">
+                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                    </svg>
+                </button>
+                <div class="items__element--add">
+                    <p>
+                        + Add to cart
+                    </p>
+                </div>
+            </div>
+            <div class="items__element items__element-7">
+                <img src="./img/photo7.png" alt="photo 7">
+                <button class="items__element--button">                
+                    <svg class="items__element--like">
+                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                    </svg>
+                </button>
+                <div class="items__element--add">
+                    <p>
+                        + Add to cart
+                    </p>
+                </div>
+            </div>
+            <div class="items__element items__element-8">
+                <img src="./img/photo8.png" alt="photo 8">
+                <div class="items__element--discount"><p>40%</p></div>
+                <button class="items__element--button">                
+                    <svg class="items__element--like">
+                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                    </svg>
+                </button>
+                <div class="items__element--add">
+                    <p>
+                        + Add to cart
+                    </p>
+                </div>
+            </div>
         </div>
         <footer class="footer">
             footer
