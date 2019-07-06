@@ -36,6 +36,7 @@
             display: flex;
             flex-direction: row;
             justify-self: center;
+            align-items: center;
             margin-right: 0;
             width: 100%;
             
@@ -98,16 +99,17 @@
     &__bottom {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, max-content);
-        align-content: center;
+        grid-template-rows: repeat(5, max-content);
+        align-items: center;
         justify-content: space-between;
-        position: sticky;
+        position: absolute;
         width: 100%;
         z-index: 1;
 
         @media screen and (min-width: 860px) {
-            grid-template-columns: 1fr max-content minmax(min-content, 50vw) max-content 1fr min-content 7.5rem;
-            grid-template-rows: 1fr;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: min-content;
+            position: relative;
         }
 
         & > input {
@@ -127,8 +129,8 @@
         
         & > label {
             position: absolute;
-            top: -22%;
-            left: 49.5%; 
+            top: -20%;
+            left: 50%; 
             margin-left: 1em;
             height: 100%;
             display: flex;
@@ -167,16 +169,21 @@
         }
         
         &--logo {
+            @media screen and (min-width: 960px) {
+                margin-left: 10rem;
+            }
             @media screen and (min-width: 860px) {
-                grid-column: 3 / 4;
+                grid-column: 2 / 4;
                 justify-self: center;
                 font-size: 7.2rem;
+                margin-top: 0;
             }
 
             grid-row: 1 / 2;
             text-align: center;
             font-size: 4.8rem;
             font-family: $logo-font;
+            margin-top: 1rem;
             padding-left: 2rem;
             a {
                 text-decoration: none;
@@ -189,13 +196,18 @@
             align-items: center;
             transform: scale(1, 0);
             transition: all 0.4s ease-in-out;
-            padding-left: 5rem;
-            margin-top: 6rem;
+            padding-left: 0px;
+            margin-top: 3rem;
             padding-bottom: 4rem;
             background-color: $color-primary-1;
 
+            @media screen and (min-width: 1020px) {
+                padding-left: 5rem;
+                transform: scale(1, 0);
+            }
+
             @media screen and (min-width: 860px) {
-                grid-column: 2 / 3;
+                grid-column: 1 / 2;
                 transform: scale(1, 1);
                 color: $color-primary-1;
                 background-color: transparent;
@@ -242,17 +254,14 @@
 
         &--SM-buttons {
             margin: 0 auto;
-            padding-top: 2rem;
-            padding-left: 6rem;
-            padding-bottom: 2rem;
-            transform: scale(1, 0) ;
             transition: all 0.4s ease-in-out;
+            display: none;
 
             @media screen and (min-width: 860px) {
                 grid-column: 4 / 5;
                 padding-left: 2rem;
-                transform: translateY(20%) scale(1, 1);
                 transform-origin: top;
+                display: block;
             }
             
             ul {
@@ -288,15 +297,22 @@
             flex-direction: column;
             align-items: center;
             position: relative;
-            margin-left: 5rem;
+            margin-left: 0px;
             transform: scale(1, 0);
             transition: all 0.4s ease-in-out;
             transform-origin: top;
+            display: none;
+
+            @media screen and (max-width: 960px) {
+                margin: 0 auto 0 2.4rem;
+            }
 
             @media screen and (min-width: 860px) {
-                grid-column: 6 / 7;
-                margin: 0 auto 0 2.4rem;
+                grid-column: 5 / 6;
+                margin: 0 auto 0 1rem;
                 transform: scale(1, 1);
+                margin-left: 5rem;
+                display: block;
             }
 
             input {
@@ -317,10 +333,13 @@
                 font-size: 1.2rem;
                 text-transform: uppercase;
                 line-height: 3.5rem;
-                transform: translateY(50%);
 
-                @media screen and (min-width: 860px) {
-                    transform: translateY(120%);                
+                @media screen and (min-width: 1080px) { 
+                    margin-right: 9rem;               
+                }
+
+                @media screen and (max-width: 1080px) { 
+                    margin-right: 3rem;               
                 }
 
                 cursor: pointer;
@@ -345,7 +364,7 @@
                 display: none;
 
                 @media screen and (min-width: 860px) {
-                    top: 7.7rem;
+                    top: 2.7rem;
                     left: 0;               
                 }
 

@@ -32,11 +32,18 @@
             margin-left: 5vw;
             margin-right: 5vw;
         }
+
+
     }
 
     &__text {
         font-family: $header-font;
         font-weight: bold;
         font-size: 3rem;
+        position: relative;
+
+        @media (max-width: 480px) {
+            font-size: 2rem;
+        }
     }
 }

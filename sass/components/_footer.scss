@@ -76,6 +76,9 @@
 
         h4 {
             padding-bottom: 1rem;
+            @media(max-width: 860px) {
+                text-align: center;
+            }
         }
 
         span {
@@ -86,6 +89,11 @@
         &--SM-buttons {
 
             margin: 4.5rem 0;
+
+            @media(max-width: 860px) {
+                margin: 2rem auto;
+                text-align: center;
+            }
              
             ul {
                 list-style: none;
@@ -133,16 +141,19 @@
 
             button {
                 position: absolute;
-                top: 6%;
+                top: 10%;
                 right: .5rem;
                 height: 3.3rem;
                 width: 10rem;
                 background-color: #323030;
+                color: #fff;
                 border: none;
                 cursor: pointer;
 
                 @media screen and (min-width: 860px) {
-                    right: 18rem;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
             }
         }
