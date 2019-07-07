@@ -107,10 +107,22 @@
                 margin: 0 auto;
                 justify-content: flex-start;
 
-                img {
+                .plane {
                     width: 3.8rem;
                     height: 3.8rem;
-                    margin-right: 1rem;
+                    margin-left: 3rem;
+                    margin-top: 1rem;
+                    transform: rotate(-45deg);
+                    color: #fff;
+                }
+
+
+                i {
+                    width: 3.8rem;
+                    height: 3.8rem;
+                    margin-right: 4rem;
+                    margin-top: -1rem;
+                    color: #fff;
                 }
 
                 div {

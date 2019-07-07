@@ -61,7 +61,12 @@
                 stroke: white; 
                 fill: transparent;
                 transition: all .8s ease;
-                outline: none;
+                outline: none; 
+                
+                path {
+                    width: 5.6rem;
+                    height: 5rem;
+                }
             }
         }
 
@@ -121,8 +126,8 @@
         }
 
         &:hover button {
-            width: 5.6rem;
-            height: 5rem;
+            width: 3.2rem;
+            height: 3.2rem;
         }
 
         &--discount {

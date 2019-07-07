@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Shophia</title>
 </head>
@@ -19,7 +21,7 @@
                     <div class="header__top--menu-item"><a href="#">Welcome msg</a></div>
                     <div class="header__top--menu-item"><a href="#">My account</a></div>
                     <div class="header__top--menu-item"><a href="#">My wishlist</a></div>
-                    <div class="header__top--menu-item"><a href="#">login</a></div>
+                    <div class="header__top--menu-item"><a href="#" id="login">login</a></div>
                 </div>
             </div>
             <div class="header__bottom">
@@ -78,10 +80,21 @@
                     </ul>
                 </div>
             </div>
+            <div class="slider">
+                    <div class="banner__imgbox">
+                        <img src="./img/bg1.png" alt="bg1" class="banner__imgbox--img1">
+                    </div>
+                    <div class="banner__imgbox">
+                        <img src="./img/bg2.png" alt="bg2" class="banner__imgbox--img2">
+                    </div>
+                    <div class="banner__imgbox">
+                        <img src="./img/bg3.png" alt="bg3" class="banner__imgbox--img3">
+                    </div>
+                    <div class="banner__column--left">
+                        <div class="banner__column--left--arrow"></div>
+                    </div>
+                </div>
         <div class="banner">
-            <div class="banner__column--left">
-                <div class="banner__column--left--arrow"></div>
-            </div>
             <div class="banner__main">
                 <div class="banner__main--border-box-1">
                     <div class="banner__main--border-box-2">
@@ -110,7 +123,7 @@
             <div class="offer__container">
                 <div class="offer__container--item offer__container--item-left">
                     <div class="offer__container--item-group">
-                        <i class="fas fa-plane fa-rotate-90"></i>
+                        <i class="fas fa-plane fa-rotate-270 fa-5x plane"></i>
                         <div>
                             <h2>Free Shipping</h2>
                             <p>In Order Min $200</p>
@@ -119,7 +132,7 @@
                 </div>
                 <div class="offer__container--item offer__container--item-center">
                     <div class="offer__container--item-group">
-                        <i class="far fa-clock"></i>
+                        <i class="far fa-clock fa-5x"></i>
                         <div>
                             <h2>30-days returns</h2>
                             <p>Money Back Guarantee</p>
@@ -128,7 +141,7 @@
                 </div>
                 <div class="offer__container--item offer__container--item-right">
                     <div class="offer__container--item-group">
-                        <i class="far fa-life-ring"></i>>
+                        <i class="far fa-life-ring fa-5x"></i>
                         <div>
                             <h2>24/7 support</h2>
                             <p>Lifetime Support</p>
@@ -152,7 +165,7 @@
                 <div class="items__element--discount"><p>20%</p></div>
                 <button class="items__element--button">                
                     <svg class="items__element--like">
-                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                        <path d="M16.042 8.345c0 0-2-4.262-6.5-4.262-4.917 0-7.5 4.167-7.5 8.333 0 6.917 14 15.5 14 15.5s13.916-8.5 13.916-15.5c0-4.25-2.666-8.333-7.416-8.333s-6.5 4.262-6.5 4.262z"></path>
                     </svg>
                 </button>
                 <div class="items__element--add">
@@ -165,7 +178,7 @@
                 <img src="./img/photo2.png" alt="photo-2">
                 <button class="items__element--button">                
                     <svg class="items__element--like">
-                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                        <path d="M16.042 8.345c0 0-2-4.262-6.5-4.262-4.917 0-7.5 4.167-7.5 8.333 0 6.917 14 15.5 14 15.5s13.916-8.5 13.916-15.5c0-4.25-2.666-8.333-7.416-8.333s-6.5 4.262-6.5 4.262z"></path>
                     </svg>
                 </button>
                 <div class="items__element--add">
@@ -178,7 +191,7 @@
                 <img src="./img/photo3.png" alt="photo 3">
                 <button class="items__element--button">                
                     <svg class="items__element--like">
-                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                        <path d="M16.042 8.345c0 0-2-4.262-6.5-4.262-4.917 0-7.5 4.167-7.5 8.333 0 6.917 14 15.5 14 15.5s13.916-8.5 13.916-15.5c0-4.25-2.666-8.333-7.416-8.333s-6.5 4.262-6.5 4.262z"></path>
                     </svg>
                 </button>
                 <div class="items__element--add">
@@ -192,7 +205,7 @@
                 <div class="items__element--discount"><p>40%</p></div>
                 <button class="items__element--button">                
                     <svg class="items__element--like">
-                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                        <path d="M16.042 8.345c0 0-2-4.262-6.5-4.262-4.917 0-7.5 4.167-7.5 8.333 0 6.917 14 15.5 14 15.5s13.916-8.5 13.916-15.5c0-4.25-2.666-8.333-7.416-8.333s-6.5 4.262-6.5 4.262z"></path>
                     </svg>
                 </button>
                 <div class="items__element--add">
@@ -206,7 +219,7 @@
                 <div class="items__element--discount"><p>20%</p></div>
                 <button class="items__element--button">                
                     <svg class="items__element--like">
-                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                        <path d="M16.042 8.345c0 0-2-4.262-6.5-4.262-4.917 0-7.5 4.167-7.5 8.333 0 6.917 14 15.5 14 15.5s13.916-8.5 13.916-15.5c0-4.25-2.666-8.333-7.416-8.333s-6.5 4.262-6.5 4.262z"></path>
                     </svg>
                 </button>
                 <div class="items__element--add">
@@ -219,7 +232,7 @@
                 <img src="./img/photo6.png" alt="photo 6">
                 <button class="items__element--button">                
                     <svg class="items__element--like">
-                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                        <path d="M16.042 8.345c0 0-2-4.262-6.5-4.262-4.917 0-7.5 4.167-7.5 8.333 0 6.917 14 15.5 14 15.5s13.916-8.5 13.916-15.5c0-4.25-2.666-8.333-7.416-8.333s-6.5 4.262-6.5 4.262z"></path>
                     </svg>
                 </button>
                 <div class="items__element--add">
@@ -232,7 +245,7 @@
                 <img src="./img/photo7.png" alt="photo 7">
                 <button class="items__element--button">                
                     <svg class="items__element--like">
-                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                        <path d="M16.042 8.345c0 0-2-4.262-6.5-4.262-4.917 0-7.5 4.167-7.5 8.333 0 6.917 14 15.5 14 15.5s13.916-8.5 13.916-15.5c0-4.25-2.666-8.333-7.416-8.333s-6.5 4.262-6.5 4.262z"></path>
                     </svg>
                 </button>
                 <div class="items__element--add">
@@ -246,7 +259,7 @@
                 <div class="items__element--discount"><p>40%</p></div>
                 <button class="items__element--button">                
                     <svg class="items__element--like">
-                        <use xlink:href="data:image/sprite.svg#icon-heart-full"></use>
+                        <path d="M16.042 8.345c0 0-2-4.262-6.5-4.262-4.917 0-7.5 4.167-7.5 8.333 0 6.917 14 15.5 14 15.5s13.916-8.5 13.916-15.5c0-4.25-2.666-8.333-7.416-8.333s-6.5 4.262-6.5 4.262z"></path>
                     </svg>
                 </button>
                 <div class="items__element--add">
@@ -309,7 +322,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-twitter"></i>
                             </a>
                         </li>
                         <li>
@@ -352,9 +365,37 @@
                 </div>
             </div>
         </footer>
+        <!--- Modal ----->
+        <div class="modal">
+            <div id="modalForm" class="modal__content">
+                <h3 class="modal__form--heading">Sign in</h3>
+                <div class="modal__group">
+                    <div class="modal__container modal__container--login">
+                        <input type="text" name="login" id="loginForm" class="modal__input--text" required>
+                        <span class="text login__text">Login</span>
+                        <span class="badge login__badge"></span>
+                    </div>
+                    <div class="modal__container modal__container--password">
+                        <input type="password" name="password" id="password" class="modal__input--text" required>
+                        <span class="text password__text">Password</span>
+                        <span class="badge password__badge"></span>
+                    </div>
+                </div>
+                <div class="modal__button--group">
+                    <div>
+                        <input type="checkbox" name="rules" id="rules">
+                        <label for="checkbox">I agree width 
+                            <a href="#">Terms</a> and <a href="#">Conditions</a>.
+                        </label>
+                    </div>
+                    <button id="signInButton">Sign in</button>
+                </div>
+            </div>
+        </div>    
         <button id="toTopBtn"><i class="fas fa-arrow-up"></i></button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/slick.js"></script>
     <script src="https://kit.fontawesome.com/93245df1ff.js"></script>
     <script src="./js/main.js"></script>
 </body>

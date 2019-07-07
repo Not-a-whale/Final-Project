@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    outline: 0;
 }
 
 html {
@@ -37,4 +38,128 @@ body {
     color: #fff;
     border: none;
     cursor: pointer;
+    display: none;
+    outline: none;
+}
+
+#toTopBtn:focus {
+    outline: none;
+}
+
+.slider {
+    width: 300px;
+    height: 200px;
+}
+
+
+// Styles for Modal
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99999999999999999999999;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+
+    &__content {
+        background: #fff;
+        text-align: left;
+        margin: 10% auto;
+        width: 350px;
+        border-radius: 3px;
+        padding: 3rem;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+        animation-name: modalopen;
+        animation-duration: 0.8s;
+    }
+
+    &__form--heading {
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: $color-secondary-2;
+    }
+
+    &__group {
+        margin: 1rem 0 1rem 0;
+    }
+
+    &__container {
+        margin: 1rem 0 1rem 0;
+        position: relative;
+
+        input {
+            height:3rem;
+            width: 100%;
+            background-color: #eeeeee;
+        }
+
+        input.modal__input--text:focus + span {
+            top: -1.3rem;
+            opacity: 0.1;
+        }
+
+        span.badge {
+            position: absolute;
+            display: block;
+            width: 8px;
+            height: 100%;
+            background-color: $color-secondary-2;
+            top: -1px;
+            left: -6px;
+        }
+
+        span.text {
+            position: absolute;
+            display: block;
+            color: gray;
+            font-size: 1rem;
+            top: 9px;
+            left: 1.5rem;
+            transition: all .3s ease;
+        }
+    }
+    &__button--group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            label {
+                display: block;
+                margin-left: 0.5rem;
+            }
+        }
+
+        button {
+            text-transform: uppercase;
+            width: 10rem;
+            height: 3rem;
+            background-color: $color-secondary-2;
+            color: #fff;
+            outline: none;
+            border-radius: 3px;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    }
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
