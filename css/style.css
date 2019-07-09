@@ -26,7 +26,8 @@ html {
 body {
   font-family: "Lato Regular";
   color: #000000;
-  font-weight: 300; }
+  font-weight: 300;
+  background-repeat: no-repeat; }
 
 .container {
   max-width: 140rem;
