@@ -1,86 +1,104 @@
 .banner {
     position: relative;
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr minmax(min-content, 80vw) 1fr;
-    margin-top: 10rem;
+ //   display: grid;
+ //   grid-template-columns: 1fr minmax(min-content, 80vw) 1fr;
+ //   margin-top: 10rem;
     transition: all 0.4s ease-in-out;
-
-
-    background-image: url(../img/bg1.png);
-    background-position: 14% -70%;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    &__imgbox {
-        position: absolute;
-        width: 100%;
-        height: 200px;
-        
+    @media screen and (max-width: 960px) {
+        margin-top: 10rem;
     }
 
-    @media screen and (min-width: 860px) {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-top: 0;
-    }
-
-
-    &__column--left {
-        grid-column: 1 / 2;
-        height: 100%;
-        width: 100%;
+    &__slider--img-box {
         position: relative;
+        ul {
+            width: 10000px;
+            list-style: none;
+            li {
+                float: left;
+                img {
+                    width: 100vw;
+                    height: auto;
+                }
+            }
+        }
+    }
 
-        &--arrow { 
-            position: absolute;
-            top: 50%;
-            left: 3rem;
+    &__slider--nav {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 99999999999999999999999999999;
+        top: 40%;
+        left: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-1 {
+            margin-left: 2rem;
             width: 28px;
             height: 28px;
             border-left: 3px solid $color-primary-2;
             border-bottom: 3px solid $color-primary-2;
             transform: rotate(45deg);
+            border-right: none;
+            border-top:  none;
+            background: none;
+            outline: none;
 
             &:hover {
                 cursor: pointer;
                 filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.75));
+                outline: none;
             } // arrow with a drop shadow 
-        } // arrow ends 
-    } // column left ends
 
-    &__column--right {
-        grid-column: 3 / 4;
-        height: 100%;
-        width: 100%;
-        position: relative;
+            &:active {
+                outline: none;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
 
-        &--arrow {
-            position: absolute;
-            top: 50%;
-            right: 3rem;
+        &-2 {
+            margin-right: 2rem;
             width: 28px;
             height: 28px;
             border-right: 3px solid $color-primary-2;
-            border-bottom: 3px solid $color-primary-2;
-            transform: rotate(-45deg);
+            border-top: 3px solid $color-primary-2;
+            transform: rotate(45deg);
+            border-left: none;
+            border-bottom:  none;
+            background: none;
+            outline: none;
 
             &:hover {
                 cursor: pointer;
                 filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.75));
+                outline: none;
+            } // arrow with a drop shadow 
+
+            &:active {
+                outline: none;
+            }
+            &:focus {
+                outline: none;
             }
         }
-    } // column right ends 
+    }
 
     &__main { 
 
-        grid-column: 2 / 3;
+        @media screen and (max-width: 860px) {
+            display: none;
+        }
 
-        align-self: center;
-        justify-self: center;
-
+        // align-self: center;
+        // justify-self: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         &--border-box-1 {
             height: 27.4rem;
             width: 27.4rem;
@@ -179,51 +197,16 @@
             }
         } // second border box ends 
 
-        .btn {
-            width: 18.9rem;
-            height: 5.4rem;
-            border-radius: 5px;
-            margin-top: 5.5rem;
-            margin-left: 5rem;
-            color: $color-primary-2;
-            font-size: 2.4rem;
-            text-transform: uppercase;
-            outline: none;
-            transition: 0.8s;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            z-index: 1;
-
-            &:hover {
-                color: $color-secondary-2;
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                width: 100%;
-                height: 180%;
-                background: $color-secondary-2;
-                z-index: -1;
-                transition: .8s;
-                bottom: 0;
-                border-radius: 50% 50% 0 0;
-            }
-
-            &:hover::before {
-                cursor: pointer;
-                height: 0;
-            }
-        } // button ends 
-
         &--slider {
             position: absolute;
             display: inline-flex;
-            top: 93%;
+            top: 90%;
             left: 50%;
             transform: translateX(-50%);
+
+            @media screen and (max-width: 860px) {
+                top: 85%;
+            }
 
             @media screen and (min-width: 860px) {
                 left: 50%;
@@ -246,5 +229,127 @@
                 }
             }
         }
-    } // main ends 
+    }
+
+    .btn {
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 18.9rem;
+        height: 5.4rem;
+        border-radius: 5px;
+        color: $color-primary-2;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        outline: none;
+        transition: 0.8s;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 1;
+
+        &:hover {
+            color: $color-secondary-2;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 180%;
+            background: $color-secondary-2;
+            z-index: -1;
+            transition: .8s;
+            bottom: 0;
+            border-radius: 50% 50% 0 0;
+        }
+
+        &:hover::before {
+            cursor: pointer;
+            height: 0;
+        }
+    } // button ends 
 } // banner ends 
+
+/* 
+    &__img-box {
+        display: none;
+    }
+
+    @media screen and (min-width: 860px) {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 0;
+    }
+
+
+    &__column--left {
+        grid-column: 1 / 2;
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        &--arrow { 
+            position: absolute;
+            top: 50%;
+            left: 3rem;
+            width: 28px;
+            height: 28px;
+            border-left: 3px solid $color-primary-2;
+            border-bottom: 3px solid $color-primary-2;
+            transform: rotate(45deg);
+            border-right: none;
+            border-top:  none;
+            background: none;
+            outline: none;
+
+            &:hover {
+                cursor: pointer;
+                filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.75));
+                outline: none;
+            } // arrow with a drop shadow 
+
+            &:active {
+                outline: none;
+            }
+            &:focus {
+                outline: none;
+            }
+        } // arrow ends 
+    } // column left ends
+
+    &__column--right {
+        grid-column: 3 / 4;
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        &--arrow {
+            position: absolute;
+            top: 50%;
+            right: 3rem;
+            width: 28px;
+            height: 28px;
+            border-right: 3px solid $color-primary-2;
+            border-bottom: 3px solid $color-primary-2;
+            border-left: none;
+            border-top:  none;
+            transform: rotate(-45deg);
+            background: none;
+            outline: none;
+
+            &:hover {
+                cursor: pointer;
+                filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.75));
+                outline: none;
+            }
+
+            &:active {
+                outline: none;
+            }
+        }
+    } // column right ends 
+
+     // main ends  */

@@ -32,7 +32,41 @@ $( document ).ready(function() {
         }
     })
 
-    $('.slider').slick({
-    });
+        var sliderUL = $("div.banner__slider--img-box").css('overflow', 'hidden').children('ul'),
+        imgs = sliderUL.find('img'),
+        imgWidth = imgs[0].width,
+        imgLength = imgs.length,
+        current = 1;
+        totalImagesWidth =  imgLength * imgWidth;
+
+        $('#sliderNav').show().find('button').on('click', function() {
+            var direction = $(this).data('dir');
+            var loc = imgWidth;
+            
+            
+            //update current value  
+            (direction === 'next') ? ++current : --current;
+
+            if (current === 0) {
+                current = imgLength;
+                direction === 'next';
+            }  else if (current - 1 === imgLength) {
+                current = 1;
+                loc = 0;
+            }
+
+            transition(sliderUL, loc, direction);
+        });
+        function transition (container, loc, direction) {
+
+            var unit;
+
+            if(direction && loc != 0) {
+                unit = ( direction === 'next') ? '-=' : '+=';
+            }
+            container.animate({
+                'margin-left': unit ? (unit + loc) : loc
+            })
+        }
 });
 
